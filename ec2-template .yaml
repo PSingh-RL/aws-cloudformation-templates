@@ -1,0 +1,30 @@
+Resources:
+##Key Pair creation
+  NewKeyPair:
+    Type: 'AWS::EC2::KeyPair'
+    Properties:
+      KeyName: MyKey
+##This is my Web Server
+  Webserver:
+    Type: AWS::EC2::Instance
+    Properties:
+      AvailabilityZone: ap-south-1c
+      ImageId: ami-0ced6a024bb18ff2e
+      InstanceType: t3.micro
+      KeyName: !Ref  NewKeyPair
+      SubnetId:  subnet-027f0f70194f6feeb
+      Tags: 
+      - Key: Name
+        Value: Web-Server
+##This is my DataBase Server
+  Dbserver:
+    Type: AWS::EC2::Instance
+    Properties:
+      AvailabilityZone: ap-south-1b
+      ImageId: ami-0ced6a024bb18ff2e
+      InstanceType: t3.micro
+      KeyName: !Ref  NewKeyPair
+      SubnetId:  subnet-0bb906abe9551cebc
+      Tags: 
+      - Key: Name
+        Value: DB-Server
