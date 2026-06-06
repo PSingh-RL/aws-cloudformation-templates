@@ -1,2 +1,15 @@
 # aws-cloudformation-templates
-"Infrastructure as Code (IaC) templates to automate the deployment of a custom Amazon VPC and EC2 instances on AWS."
+# AWS EC2 CloudFormation Template
+# AWS VPC CloudFormation Temp
+
+This project contains an AWS CloudFormation template that creates an EC2 instance automatically.
+
+## Services Used
+- AWS CloudFormation
+- Amazon EC2
+
+## Purpose
+This template demonstrates Infrastructure as Code (IaC) using AWS CloudFormation.
+
+## Author
+Prashant Singh
